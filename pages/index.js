@@ -16,7 +16,11 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import RoomServiceIcon from "@mui/icons-material/RoomService";
+import Carousel from "framer-motion-carousel";
+import Avatar from "@mui/material/Avatar";
+
 export default function Home() {
+  const colors = ["#f90", "#ef0", "#e0f"];
   return (
     <div className={styles.container}>
       <Head>
@@ -478,21 +482,124 @@ export default function Home() {
               </Grid>
             </Grid>
           </Box>
+
+          <Box
+            sx={{ flexGrow: 1 }}
+            pl={5}
+            pr={5}
+            pt={2}
+            pb={2}
+            mt={3}
+            className={styles.teamContainer}
+          >
+            <Grid container spacing={2} className={styles.ServicesGrid}>
+              <Grid item xs={12} className={styles.servicesTitleContainer}>
+                <Typography
+                  variant="h2"
+                  component="div"
+                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
+                >
+                  Our Team
+                </Typography>
+                <Typography
+                  variant="h5"
+                  component="div"
+                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
+                >
+                  Meet our exprienced team
+                </Typography>
+              </Grid>
+              <Grid item xs={12} className={styles.teamCaraouselContainer}>
+                <Carousel interval="6000">
+                  {[1, 2, 3].map((item, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    >
+                      <Grid container spacing={2} className={styles.carousel}>
+                        <Grid item xs={4} className={styles.serviceContainer}>
+                          <Avatar
+                            alt="A"
+                            src="/public/images/header_back3.jpg"
+                            sx={{ width: 250, height: 250 }}
+                          />
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className={styles.memberName}
+                          >
+                            Abrham G.
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            className={styles.memberStatus}
+                          >
+                            CTO
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={4} className={styles.serviceContainer}>
+                          <Avatar
+                            alt="A"
+                            src="/public/images/header_back3.jpg"
+                            sx={{ width: 250, height: 250 }}
+                          />
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className={styles.memberName}
+                          >
+                            Abrham G.
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            className={styles.memberStatus}
+                          >
+                            CTO
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={4} className={styles.serviceContainer}>
+                          <Avatar
+                            alt="A"
+                            src="/public/images/header_back3.jpg"
+                            sx={{ width: 250, height: 250 }}
+                          />
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className={styles.memberName}
+                          >
+                            Abrham G.
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            className={styles.memberStatus}
+                          >
+                            CTO
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </div>
+                  ))}
+                </Carousel>
+              </Grid>
+            </Grid>
+          </Box>
         </Box>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }

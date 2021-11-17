@@ -30,7 +30,7 @@
 }
 .servicesBox {
   min-height:70vh;
-  background-color: #f6f6f6;
+  /* background-color: #f6f6f6; */
 }
 .servicesTitleContainer {
   flex: 1;
@@ -41,7 +41,7 @@
   padding-top: 2rem;
 }
 .serviceContainer {
-  background-color: #f6f6f6;
+  /* background-color: #f6f6f6; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,6 +80,32 @@
   border-color: gold;
   color: black;
   font-weight: bold;
+}
+.memberName{
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.memberStatus{
+  margin-top: 5px;
+  font-weight: normal;
+  font-family: cursive;
+  border-bottom: 3px solid gold;
+}
+.teamCaraouselContainer {
+  /* background-color: darkorange; */
+}
+.carousel{
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  /* background-color: gold; */
+}
+.teamContainer {
+  height: 70vh;
+  background-color: #f6f6f6;
+  /* background-image: url('../public/images/our_team.jpg'); */
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .getStartedContainer{
   flex: 1;
