@@ -1,15 +1,100 @@
 .container {
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
+  /* background-color: rgba(0, 0, 0, 0.719); */
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.mainHeader {
+  min-height: 70vh;
+  background-color: black;
+  background-image: url('../public/images/header_back3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.ourServicesHeader {
+  
+  background-color: white;
+ 
+  /* justify-content: center; */
+}
+.servicesBox {
+  min-height:70vh;
+  background-color: #f6f6f6;
+}
+.servicesTitleContainer {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 2rem;
+}
+.serviceContainer {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ServicesGrid{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.serviceIcon {
+  font-size: 120;
+  text-align: center;
+  color: darkgoldenrod;
+}
+.serviceTitle {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  border-bottom: 5px solid black;
+}
+.serviceDesc{
+  font-weight: normal;
+  text-align: center;
+  padding-top: 20px;
+}
+.serviceButton {
+  border-color: gold;
+  color: black;
+  font-weight: bold;
+}
+.getStartedContainer{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  min-height: 50vh;
+}
+
+.getStartedButton {
+   border-color: gold; 
+   color: white;
+   font-weight: bold;
 }
 
 .footer {
@@ -26,6 +111,13 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.appBar {
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem; 
+  background-color: gold;
 }
 
 .title a {

@@ -1,7 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import SendIcon from "@mui/icons-material/Send";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import RoomServiceIcon from "@mui/icons-material/RoomService";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -12,44 +26,459 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+        <Box sx={{ flexGrow: 1 }}>
+          <AppBar position="static" className={styles.appBar}>
+            <Toolbar>
+              <Typography
+                variant="h5"
+                component="div"
+                sx={{ flexGrow: 1, fontWeight: "700", color: "black" }}
+              >
+                Company Logo
+              </Typography>
+              <Button sx={{ fontWeight: "700", color: "black" }}>Home</Button>
+              <Button sx={{ fontWeight: "700", color: "black" }}>
+                Services
+              </Button>
+              <Button sx={{ fontWeight: "700", color: "black" }}>
+                About Us
+              </Button>
+              <Button sx={{ fontWeight: "700", color: "black" }}>
+                Contact Us
+              </Button>
+            </Toolbar>
+          </AppBar>
+          <Box sx={{ flexGrow: 1 }} className={styles.mainHeader}>
+            <Grid container spacing={2}>
+              <Grid item xs={6} className={styles.getStartedContainer} pl={10}>
+                <Typography
+                  ml={10}
+                  variant="h2"
+                  component="div"
+                  sx={{ fontWeight: "700", color: "white", textAlign: "left" }}
+                >
+                  Welcome
+                </Typography>
+                <Typography
+                  ml={10}
+                  mt={2}
+                  variant="h5"
+                  component="div"
+                  sx={{ fontWeight: "600", color: "white", width: 600 }}
+                >
+                  Incididunt cillum irure proident ea minim magna. Consectetur
+                  ex velit ad non culpa laboris. Et tempor aliqua exercitation
+                  quis nostrud in nisi non exercitation nisi amet quis. Ea ipsum
+                  exercitation anim incididunt excepteur est sunt tempor sit
+                  aliqua nulla. Irure minim culpa aliqua pariatur occaecat.
+                  Cillum mollit sit sint occaecat ullamco do duis eiusmod aliqua
+                  sunt nisi do. Anim sit duis duis irure enim do est fugiat.
+                </Typography>
+                <Button
+                  variant="outlined"
+                  mt={2}
+                  ml={10}
+                  sx={{
+                    ml: 10,
+                    mt: 2,
+                    width: 200,
+                    height: 60,
+                  }}
+                  className={styles.getStartedButton}
+                >
+                  Learn More
+                </Button>
+              </Grid>
+              <Grid item xs={4}></Grid>
+            </Grid>
+          </Box>
+          <Box sx={{ flexGrow: 1 }} className={styles.ourServicesHeader}>
+            <Grid container spacing={2} className={styles.ServicesGrid}>
+              <Grid item xs={12} className={styles.servicesTitleContainer}>
+                <Typography
+                  variant="h2"
+                  component="div"
+                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
+                >
+                  Our Services
+                </Typography>
+                <Typography
+                  variant="h5"
+                  component="div"
+                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
+                >
+                  These are services we are good doing at
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box
+            sx={{ flexGrow: 1 }}
+            ml={4}
+            pl={5}
+            pr={5}
+            pt={2}
+            pb={2}
+            mr={4}
+            className={styles.servicesBox}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+            <Grid container spacing={2} ml={2} mt={2}>
+              <Grid item xs={4} className={styles.serviceContainer}>
+                <Card
+                  sx={{
+                    maxWidth: 345,
+                    borderWidth: 2,
+                    borderColor: "darkgoldenrod",
+                  }}
+                >
+                  <CardContent className={styles.serviceCard}>
+                    <RoomServiceIcon
+                      sx={{
+                        fontSize: 120,
+                        textAlign: "center",
+                        color: "golden",
+                      }}
+                      className={styles.serviceIcon}
+                    />
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className={styles.serviceTitle}
+                    >
+                      Service 1
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      className={styles.serviceDesc}
+                    >
+                      Anim qui consequat deserunt pariatur anim cillum do
+                      reprehenderit. Labore dolor sunt eu Lorem officia
+                      adipisicing et minim et occaecat. Et est aute mollit
+                      ullamco commodo incididunt enim nulla laboris laboris
+                      irure sit enim. Velit velit sint adipisicing fugiat.
+                      Commodo quis exercitation officia dolor. Ullamco cupidatat
+                      incididunt dolore fugiat proident. Sit exercitation
+                      nostrud anim proident incididunt tempor qui.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      variant="outlined"
+                      mt={1}
+                      mb={1}
+                      ml={10}
+                      sx={{
+                        ml: 10,
+                        mt: 2,
+                        width: 200,
+                        height: 60,
+                      }}
+                      className={styles.serviceButton}
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4} className={styles.serviceContainer}>
+                <Card
+                  sx={{
+                    maxWidth: 345,
+                    borderWidth: 2,
+                    borderColor: "darkgoldenrod",
+                  }}
+                >
+                  <CardContent className={styles.serviceCard}>
+                    <RoomServiceIcon
+                      sx={{
+                        fontSize: 120,
+                        textAlign: "center",
+                        color: "golden",
+                      }}
+                      className={styles.serviceIcon}
+                    />
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className={styles.serviceTitle}
+                    >
+                      Service 1
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      className={styles.serviceDesc}
+                    >
+                      Anim qui consequat deserunt pariatur anim cillum do
+                      reprehenderit. Labore dolor sunt eu Lorem officia
+                      adipisicing et minim et occaecat. Et est aute mollit
+                      ullamco commodo incididunt enim nulla laboris laboris
+                      irure sit enim. Velit velit sint adipisicing fugiat.
+                      Commodo quis exercitation officia dolor. Ullamco cupidatat
+                      incididunt dolore fugiat proident. Sit exercitation
+                      nostrud anim proident incididunt tempor qui.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      variant="outlined"
+                      mt={1}
+                      mb={1}
+                      ml={10}
+                      sx={{
+                        ml: 10,
+                        mt: 2,
+                        width: 200,
+                        height: 60,
+                      }}
+                      className={styles.serviceButton}
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4} className={styles.serviceContainer}>
+                <Card
+                  sx={{
+                    maxWidth: 345,
+                    borderWidth: 2,
+                    borderColor: "darkgoldenrod",
+                  }}
+                >
+                  <CardContent className={styles.serviceCard}>
+                    <RoomServiceIcon
+                      sx={{
+                        fontSize: 120,
+                        textAlign: "center",
+                        color: "golden",
+                      }}
+                      className={styles.serviceIcon}
+                    />
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className={styles.serviceTitle}
+                    >
+                      Service 1
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      className={styles.serviceDesc}
+                    >
+                      Anim qui consequat deserunt pariatur anim cillum do
+                      reprehenderit. Labore dolor sunt eu Lorem officia
+                      adipisicing et minim et occaecat. Et est aute mollit
+                      ullamco commodo incididunt enim nulla laboris laboris
+                      irure sit enim. Velit velit sint adipisicing fugiat.
+                      Commodo quis exercitation officia dolor. Ullamco cupidatat
+                      incididunt dolore fugiat proident. Sit exercitation
+                      nostrud anim proident incididunt tempor qui.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      variant="outlined"
+                      mt={1}
+                      mb={1}
+                      ml={10}
+                      sx={{
+                        ml: 10,
+                        mt: 2,
+                        width: 200,
+                        height: 60,
+                      }}
+                      className={styles.serviceButton}
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4} className={styles.serviceContainer}>
+                <Card
+                  sx={{
+                    maxWidth: 345,
+                    borderWidth: 2,
+                    borderColor: "darkgoldenrod",
+                  }}
+                >
+                  <CardContent className={styles.serviceCard}>
+                    <RoomServiceIcon
+                      sx={{
+                        fontSize: 120,
+                        textAlign: "center",
+                        color: "golden",
+                      }}
+                      className={styles.serviceIcon}
+                    />
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className={styles.serviceTitle}
+                    >
+                      Service 1
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      className={styles.serviceDesc}
+                    >
+                      Anim qui consequat deserunt pariatur anim cillum do
+                      reprehenderit. Labore dolor sunt eu Lorem officia
+                      adipisicing et minim et occaecat. Et est aute mollit
+                      ullamco commodo incididunt enim nulla laboris laboris
+                      irure sit enim. Velit velit sint adipisicing fugiat.
+                      Commodo quis exercitation officia dolor. Ullamco cupidatat
+                      incididunt dolore fugiat proident. Sit exercitation
+                      nostrud anim proident incididunt tempor qui.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      variant="outlined"
+                      mt={1}
+                      mb={1}
+                      ml={10}
+                      sx={{
+                        ml: 10,
+                        mt: 2,
+                        width: 200,
+                        height: 60,
+                      }}
+                      className={styles.serviceButton}
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4} className={styles.serviceContainer}>
+                <Card
+                  sx={{
+                    maxWidth: 345,
+                    borderWidth: 2,
+                    borderColor: "darkgoldenrod",
+                  }}
+                >
+                  <CardContent className={styles.serviceCard}>
+                    <RoomServiceIcon
+                      sx={{
+                        fontSize: 120,
+                        textAlign: "center",
+                        color: "golden",
+                      }}
+                      className={styles.serviceIcon}
+                    />
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className={styles.serviceTitle}
+                    >
+                      Service 1
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      className={styles.serviceDesc}
+                    >
+                      Anim qui consequat deserunt pariatur anim cillum do
+                      reprehenderit. Labore dolor sunt eu Lorem officia
+                      adipisicing et minim et occaecat. Et est aute mollit
+                      ullamco commodo incididunt enim nulla laboris laboris
+                      irure sit enim. Velit velit sint adipisicing fugiat.
+                      Commodo quis exercitation officia dolor. Ullamco cupidatat
+                      incididunt dolore fugiat proident. Sit exercitation
+                      nostrud anim proident incididunt tempor qui.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      variant="outlined"
+                      mt={1}
+                      mb={1}
+                      ml={10}
+                      sx={{
+                        ml: 10,
+                        mt: 2,
+                        width: 200,
+                        height: 60,
+                      }}
+                      className={styles.serviceButton}
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4} className={styles.serviceContainer}>
+                <Card
+                  sx={{
+                    maxWidth: 345,
+                    borderWidth: 2,
+                    borderColor: "darkgoldenrod",
+                  }}
+                >
+                  <CardContent className={styles.serviceCard}>
+                    <RoomServiceIcon
+                      sx={{
+                        fontSize: 120,
+                        textAlign: "center",
+                      }}
+                      className={styles.serviceIcon}
+                    />
+                    <Typography
+                      gutterBottom
+                      variant="h4"
+                      component="div"
+                      className={styles.serviceTitle}
+                    >
+                      Service 1
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      className={styles.serviceDesc}
+                    >
+                      Anim qui consequat deserunt pariatur anim cillum do
+                      reprehenderit. Labore dolor sunt eu Lorem officia
+                      adipisicing et minim et occaecat. Et est aute mollit
+                      ullamco commodo incididunt enim nulla laboris laboris
+                      irure sit enim. Velit velit sint adipisicing fugiat.
+                      Commodo quis exercitation officia dolor. Ullamco cupidatat
+                      incididunt dolore fugiat proident. Sit exercitation
+                      nostrud anim proident incididunt tempor qui.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      variant="outlined"
+                      mt={1}
+                      mb={1}
+                      ml={10}
+                      sx={{
+                        ml: 10,
+                        mt: 2,
+                        width: 200,
+                        height: 60,
+                      }}
+                      className={styles.serviceButton}
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
       </main>
 
       <footer className={styles.footer}>
@@ -58,12 +487,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
