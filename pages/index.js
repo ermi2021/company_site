@@ -28,13 +28,14 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import bounce from "react-animations/lib/fade-in";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Zoom from "@mui/material/Zoom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import CssBaseline from "@mui/material/CssBaseline";
-
+import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
+import Rotate from "react-reveal/Rotate";
 function ScrollTop(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -127,49 +128,60 @@ export default function Home(props) {
           <Box className={styles.mainHeader}>
             <Grid container spacing={2}>
               <Grid item xs={6} className={styles.getStartedContainer} pl={10}>
-                <Typography
-                  ml={10}
-                  variant="h2"
-                  component="div"
-                  sx={{ fontWeight: "700", color: "white", textAlign: "left" }}
-                >
-                  Welcome
-                </Typography>
-                <Typography
-                  ml={10}
-                  mt={2}
-                  variant="h5"
-                  component="div"
-                  sx={{
-                    fontWeight: "600",
-                    color: "white",
-                    width: 600,
-                    textAlign: "justify",
-                  }}
-                  className={styles.companyDesc}
-                >
-                  Incididunt cillum irure proident ea minim magna. Consectetur
-                  ex velit ad non culpa laboris. Et tempor aliqua exercitation
-                  quis nostrud in nisi non exercitation nisi amet quis. Ea ipsum
-                  exercitation anim incididunt excepteur est sunt tempor sit
-                  aliqua nulla. Irure minim culpa aliqua pariatur occaecat.
-                  Cillum mollit sit sint occaecat ullamco do duis eiusmod aliqua
-                  sunt nisi do. Anim sit duis duis irure enim do est fugiat.
-                </Typography>
-                <Button
-                  variant="outlined"
-                  mt={2}
-                  ml={10}
-                  sx={{
-                    ml: 10,
-                    mt: 2,
-                    width: 200,
-                    height: 60,
-                  }}
-                  className={styles.getStartedButton}
-                >
-                  Learn More
-                </Button>
+                <Fade top>
+                  <Typography
+                    ml={10}
+                    variant="h2"
+                    component="div"
+                    sx={{
+                      fontWeight: "700",
+                      color: "white",
+                      textAlign: "left",
+                    }}
+                  >
+                    Welcome
+                  </Typography>
+                </Fade>
+                <Fade bottom>
+                  <Typography
+                    ml={10}
+                    mt={2}
+                    variant="h5"
+                    component="div"
+                    sx={{
+                      fontWeight: "600",
+                      color: "white",
+                      width: 600,
+                      textAlign: "justify",
+                    }}
+                    className={styles.companyDesc}
+                  >
+                    Incididunt cillum irure proident ea minim magna. Consectetur
+                    ex velit ad non culpa laboris. Et tempor aliqua exercitation
+                    quis nostrud in nisi non exercitation nisi amet quis. Ea
+                    ipsum exercitation anim incididunt excepteur est sunt tempor
+                    sit aliqua nulla. Irure minim culpa aliqua pariatur
+                    occaecat. Cillum mollit sit sint occaecat ullamco do duis
+                    eiusmod aliqua sunt nisi do. Anim sit duis duis irure enim
+                    do est fugiat.
+                  </Typography>
+                </Fade>
+                <Fade left>
+                  <Button
+                    variant="outlined"
+                    mt={2}
+                    ml={10}
+                    sx={{
+                      ml: 10,
+                      mt: 2,
+                      width: 200,
+                      height: 60,
+                    }}
+                    className={styles.getStartedButton}
+                  >
+                    Learn More
+                  </Button>
+                </Fade>
               </Grid>
               <Grid item xs={4}></Grid>
             </Grid>
@@ -199,6 +211,7 @@ export default function Home(props) {
               </Grid>
             </Grid>
           </Box>
+
           <Box
             sx={{ flexGrow: 1 }}
             ml={4}
@@ -211,357 +224,375 @@ export default function Home(props) {
           >
             <Grid container spacing={2} ml={2} mt={2}>
               <Grid item xs={4} className={styles.serviceContainer}>
-                <Card
-                  sx={{
-                    maxWidth: 345,
-                    borderWidth: 2,
-                    borderColor: "darkgoldenrod",
-                  }}
-                >
-                  <CardContent className={styles.serviceCard}>
-                    <RoomServiceIcon
-                      sx={{
-                        fontSize: 120,
-                        textAlign: "center",
-                        color: "golden",
-                      }}
-                      className={styles.serviceIcon}
-                    />
-                    <Typography
-                      gutterBottom
-                      variant="h4"
-                      component="div"
-                      className={styles.serviceTitle}
-                    >
-                      Service 1
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      className={styles.serviceDesc}
-                    >
-                      Anim qui consequat deserunt pariatur anim cillum do
-                      reprehenderit. Labore dolor sunt eu Lorem officia
-                      adipisicing et minim et occaecat. Et est aute mollit
-                      ullamco commodo incididunt enim nulla laboris laboris
-                      irure sit enim. Velit velit sint adipisicing fugiat.
-                      Commodo quis exercitation officia dolor. Ullamco cupidatat
-                      incididunt dolore fugiat proident. Sit exercitation
-                      nostrud anim proident incididunt tempor qui.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="outlined"
-                      mt={1}
-                      mb={1}
-                      ml={10}
-                      sx={{
-                        ml: 10,
-                        mt: 2,
-                        width: 200,
-                        height: 60,
-                      }}
-                      className={styles.serviceButton}
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
+                <Pulse>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      borderWidth: 2,
+                      borderColor: "darkgoldenrod",
+                    }}
+                  >
+                    <CardContent className={styles.serviceCard}>
+                      <RoomServiceIcon
+                        sx={{
+                          fontSize: 120,
+                          textAlign: "center",
+                          color: "golden",
+                        }}
+                        className={styles.serviceIcon}
+                      />
+                      <Typography
+                        gutterBottom
+                        variant="h4"
+                        component="div"
+                        className={styles.serviceTitle}
+                      >
+                        Service 1
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        className={styles.serviceDesc}
+                      >
+                        Anim qui consequat deserunt pariatur anim cillum do
+                        reprehenderit. Labore dolor sunt eu Lorem officia
+                        adipisicing et minim et occaecat. Et est aute mollit
+                        ullamco commodo incididunt enim nulla laboris laboris
+                        irure sit enim. Velit velit sint adipisicing fugiat.
+                        Commodo quis exercitation officia dolor. Ullamco
+                        cupidatat incididunt dolore fugiat proident. Sit
+                        exercitation nostrud anim proident incididunt tempor
+                        qui.
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button
+                        variant="outlined"
+                        mt={1}
+                        mb={1}
+                        ml={10}
+                        sx={{
+                          ml: 10,
+                          mt: 2,
+                          width: 200,
+                          height: 60,
+                        }}
+                        className={styles.serviceButton}
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Pulse>
               </Grid>
               <Grid item xs={4} className={styles.serviceContainer}>
-                <Card
-                  sx={{
-                    maxWidth: 345,
-                    borderWidth: 2,
-                    borderColor: "darkgoldenrod",
-                  }}
-                >
-                  <CardContent className={styles.serviceCard}>
-                    <RoomServiceIcon
-                      sx={{
-                        fontSize: 120,
-                        textAlign: "center",
-                        color: "golden",
-                      }}
-                      className={styles.serviceIcon}
-                    />
-                    <Typography
-                      gutterBottom
-                      variant="h4"
-                      component="div"
-                      className={styles.serviceTitle}
-                    >
-                      Service 1
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      className={styles.serviceDesc}
-                    >
-                      Anim qui consequat deserunt pariatur anim cillum do
-                      reprehenderit. Labore dolor sunt eu Lorem officia
-                      adipisicing et minim et occaecat. Et est aute mollit
-                      ullamco commodo incididunt enim nulla laboris laboris
-                      irure sit enim. Velit velit sint adipisicing fugiat.
-                      Commodo quis exercitation officia dolor. Ullamco cupidatat
-                      incididunt dolore fugiat proident. Sit exercitation
-                      nostrud anim proident incididunt tempor qui.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="outlined"
-                      mt={1}
-                      mb={1}
-                      ml={10}
-                      sx={{
-                        ml: 10,
-                        mt: 2,
-                        width: 200,
-                        height: 60,
-                      }}
-                      className={styles.serviceButton}
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
+                <Pulse>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      borderWidth: 2,
+                      borderColor: "darkgoldenrod",
+                    }}
+                  >
+                    <CardContent className={styles.serviceCard}>
+                      <RoomServiceIcon
+                        sx={{
+                          fontSize: 120,
+                          textAlign: "center",
+                          color: "golden",
+                        }}
+                        className={styles.serviceIcon}
+                      />
+                      <Typography
+                        gutterBottom
+                        variant="h4"
+                        component="div"
+                        className={styles.serviceTitle}
+                      >
+                        Service 1
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        className={styles.serviceDesc}
+                      >
+                        Anim qui consequat deserunt pariatur anim cillum do
+                        reprehenderit. Labore dolor sunt eu Lorem officia
+                        adipisicing et minim et occaecat. Et est aute mollit
+                        ullamco commodo incididunt enim nulla laboris laboris
+                        irure sit enim. Velit velit sint adipisicing fugiat.
+                        Commodo quis exercitation officia dolor. Ullamco
+                        cupidatat incididunt dolore fugiat proident. Sit
+                        exercitation nostrud anim proident incididunt tempor
+                        qui.
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button
+                        variant="outlined"
+                        mt={1}
+                        mb={1}
+                        ml={10}
+                        sx={{
+                          ml: 10,
+                          mt: 2,
+                          width: 200,
+                          height: 60,
+                        }}
+                        className={styles.serviceButton}
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Pulse>
               </Grid>
               <Grid item xs={4} className={styles.serviceContainer}>
-                <Card
-                  sx={{
-                    maxWidth: 345,
-                    borderWidth: 2,
-                    borderColor: "darkgoldenrod",
-                  }}
-                >
-                  <CardContent className={styles.serviceCard}>
-                    <RoomServiceIcon
-                      sx={{
-                        fontSize: 120,
-                        textAlign: "center",
-                        color: "golden",
-                      }}
-                      className={styles.serviceIcon}
-                    />
-                    <Typography
-                      gutterBottom
-                      variant="h4"
-                      component="div"
-                      className={styles.serviceTitle}
-                    >
-                      Service 1
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      className={styles.serviceDesc}
-                    >
-                      Anim qui consequat deserunt pariatur anim cillum do
-                      reprehenderit. Labore dolor sunt eu Lorem officia
-                      adipisicing et minim et occaecat. Et est aute mollit
-                      ullamco commodo incididunt enim nulla laboris laboris
-                      irure sit enim. Velit velit sint adipisicing fugiat.
-                      Commodo quis exercitation officia dolor. Ullamco cupidatat
-                      incididunt dolore fugiat proident. Sit exercitation
-                      nostrud anim proident incididunt tempor qui.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="outlined"
-                      mt={1}
-                      mb={1}
-                      ml={10}
-                      sx={{
-                        ml: 10,
-                        mt: 2,
-                        width: 200,
-                        height: 60,
-                      }}
-                      className={styles.serviceButton}
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
+                <Pulse>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      borderWidth: 2,
+                      borderColor: "darkgoldenrod",
+                    }}
+                  >
+                    <CardContent className={styles.serviceCard}>
+                      <RoomServiceIcon
+                        sx={{
+                          fontSize: 120,
+                          textAlign: "center",
+                          color: "golden",
+                        }}
+                        className={styles.serviceIcon}
+                      />
+                      <Typography
+                        gutterBottom
+                        variant="h4"
+                        component="div"
+                        className={styles.serviceTitle}
+                      >
+                        Service 1
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        className={styles.serviceDesc}
+                      >
+                        Anim qui consequat deserunt pariatur anim cillum do
+                        reprehenderit. Labore dolor sunt eu Lorem officia
+                        adipisicing et minim et occaecat. Et est aute mollit
+                        ullamco commodo incididunt enim nulla laboris laboris
+                        irure sit enim. Velit velit sint adipisicing fugiat.
+                        Commodo quis exercitation officia dolor. Ullamco
+                        cupidatat incididunt dolore fugiat proident. Sit
+                        exercitation nostrud anim proident incididunt tempor
+                        qui.
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button
+                        variant="outlined"
+                        mt={1}
+                        mb={1}
+                        ml={10}
+                        sx={{
+                          ml: 10,
+                          mt: 2,
+                          width: 200,
+                          height: 60,
+                        }}
+                        className={styles.serviceButton}
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Pulse>
               </Grid>
               <Grid item xs={4} className={styles.serviceContainer}>
-                <Card
-                  sx={{
-                    maxWidth: 345,
-                    borderWidth: 2,
-                    borderColor: "darkgoldenrod",
-                  }}
-                >
-                  <CardContent className={styles.serviceCard}>
-                    <RoomServiceIcon
-                      sx={{
-                        fontSize: 120,
-                        textAlign: "center",
-                        color: "golden",
-                      }}
-                      className={styles.serviceIcon}
-                    />
-                    <Typography
-                      gutterBottom
-                      variant="h4"
-                      component="div"
-                      className={styles.serviceTitle}
-                    >
-                      Service 1
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      className={styles.serviceDesc}
-                    >
-                      Anim qui consequat deserunt pariatur anim cillum do
-                      reprehenderit. Labore dolor sunt eu Lorem officia
-                      adipisicing et minim et occaecat. Et est aute mollit
-                      ullamco commodo incididunt enim nulla laboris laboris
-                      irure sit enim. Velit velit sint adipisicing fugiat.
-                      Commodo quis exercitation officia dolor. Ullamco cupidatat
-                      incididunt dolore fugiat proident. Sit exercitation
-                      nostrud anim proident incididunt tempor qui.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="outlined"
-                      mt={1}
-                      mb={1}
-                      ml={10}
-                      sx={{
-                        ml: 10,
-                        mt: 2,
-                        width: 200,
-                        height: 60,
-                      }}
-                      className={styles.serviceButton}
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
+                <Pulse>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      borderWidth: 2,
+                      borderColor: "darkgoldenrod",
+                    }}
+                  >
+                    <CardContent className={styles.serviceCard}>
+                      <RoomServiceIcon
+                        sx={{
+                          fontSize: 120,
+                          textAlign: "center",
+                          color: "golden",
+                        }}
+                        className={styles.serviceIcon}
+                      />
+                      <Typography
+                        gutterBottom
+                        variant="h4"
+                        component="div"
+                        className={styles.serviceTitle}
+                      >
+                        Service 1
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        className={styles.serviceDesc}
+                      >
+                        Anim qui consequat deserunt pariatur anim cillum do
+                        reprehenderit. Labore dolor sunt eu Lorem officia
+                        adipisicing et minim et occaecat. Et est aute mollit
+                        ullamco commodo incididunt enim nulla laboris laboris
+                        irure sit enim. Velit velit sint adipisicing fugiat.
+                        Commodo quis exercitation officia dolor. Ullamco
+                        cupidatat incididunt dolore fugiat proident. Sit
+                        exercitation nostrud anim proident incididunt tempor
+                        qui.
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button
+                        variant="outlined"
+                        mt={1}
+                        mb={1}
+                        ml={10}
+                        sx={{
+                          ml: 10,
+                          mt: 2,
+                          width: 200,
+                          height: 60,
+                        }}
+                        className={styles.serviceButton}
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Pulse>
               </Grid>
               <Grid item xs={4} className={styles.serviceContainer}>
-                <Card
-                  sx={{
-                    maxWidth: 345,
-                    borderWidth: 2,
-                    borderColor: "darkgoldenrod",
-                  }}
-                >
-                  <CardContent className={styles.serviceCard}>
-                    <RoomServiceIcon
-                      sx={{
-                        fontSize: 120,
-                        textAlign: "center",
-                        color: "golden",
-                      }}
-                      className={styles.serviceIcon}
-                    />
-                    <Typography
-                      gutterBottom
-                      variant="h4"
-                      component="div"
-                      className={styles.serviceTitle}
-                    >
-                      Service 1
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      className={styles.serviceDesc}
-                    >
-                      Anim qui consequat deserunt pariatur anim cillum do
-                      reprehenderit. Labore dolor sunt eu Lorem officia
-                      adipisicing et minim et occaecat. Et est aute mollit
-                      ullamco commodo incididunt enim nulla laboris laboris
-                      irure sit enim. Velit velit sint adipisicing fugiat.
-                      Commodo quis exercitation officia dolor. Ullamco cupidatat
-                      incididunt dolore fugiat proident. Sit exercitation
-                      nostrud anim proident incididunt tempor qui.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="outlined"
-                      mt={1}
-                      mb={1}
-                      ml={10}
-                      sx={{
-                        ml: 10,
-                        mt: 2,
-                        width: 200,
-                        height: 60,
-                      }}
-                      className={styles.serviceButton}
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
+                <Pulse>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      borderWidth: 2,
+                      borderColor: "darkgoldenrod",
+                    }}
+                  >
+                    <CardContent className={styles.serviceCard}>
+                      <RoomServiceIcon
+                        sx={{
+                          fontSize: 120,
+                          textAlign: "center",
+                          color: "golden",
+                        }}
+                        className={styles.serviceIcon}
+                      />
+                      <Typography
+                        gutterBottom
+                        variant="h4"
+                        component="div"
+                        className={styles.serviceTitle}
+                      >
+                        Service 1
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        className={styles.serviceDesc}
+                      >
+                        Anim qui consequat deserunt pariatur anim cillum do
+                        reprehenderit. Labore dolor sunt eu Lorem officia
+                        adipisicing et minim et occaecat. Et est aute mollit
+                        ullamco commodo incididunt enim nulla laboris laboris
+                        irure sit enim. Velit velit sint adipisicing fugiat.
+                        Commodo quis exercitation officia dolor. Ullamco
+                        cupidatat incididunt dolore fugiat proident. Sit
+                        exercitation nostrud anim proident incididunt tempor
+                        qui.
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button
+                        variant="outlined"
+                        mt={1}
+                        mb={1}
+                        ml={10}
+                        sx={{
+                          ml: 10,
+                          mt: 2,
+                          width: 200,
+                          height: 60,
+                        }}
+                        className={styles.serviceButton}
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Pulse>
               </Grid>
               <Grid item xs={4} className={styles.serviceContainer}>
-                <Card
-                  sx={{
-                    maxWidth: 345,
-                    borderWidth: 2,
-                    borderColor: "darkgoldenrod",
-                  }}
-                >
-                  <CardContent className={styles.serviceCard}>
-                    <RoomServiceIcon
-                      sx={{
-                        fontSize: 120,
-                        textAlign: "center",
-                      }}
-                      className={styles.serviceIcon}
-                    />
-                    <Typography
-                      gutterBottom
-                      variant="h4"
-                      component="div"
-                      className={styles.serviceTitle}
-                    >
-                      Service 1
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      className={styles.serviceDesc}
-                    >
-                      Anim qui consequat deserunt pariatur anim cillum do
-                      reprehenderit. Labore dolor sunt eu Lorem officia
-                      adipisicing et minim et occaecat. Et est aute mollit
-                      ullamco commodo incididunt enim nulla laboris laboris
-                      irure sit enim. Velit velit sint adipisicing fugiat.
-                      Commodo quis exercitation officia dolor. Ullamco cupidatat
-                      incididunt dolore fugiat proident. Sit exercitation
-                      nostrud anim proident incididunt tempor qui.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="outlined"
-                      mt={1}
-                      mb={1}
-                      ml={10}
-                      sx={{
-                        ml: 10,
-                        mt: 2,
-                        width: 200,
-                        height: 60,
-                      }}
-                      className={styles.serviceButton}
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
-                </Card>
+                <Pulse>
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      borderWidth: 2,
+                      borderColor: "darkgoldenrod",
+                    }}
+                  >
+                    <CardContent className={styles.serviceCard}>
+                      <RoomServiceIcon
+                        sx={{
+                          fontSize: 120,
+                          textAlign: "center",
+                        }}
+                        className={styles.serviceIcon}
+                      />
+                      <Typography
+                        gutterBottom
+                        variant="h4"
+                        component="div"
+                        className={styles.serviceTitle}
+                      >
+                        Service 1
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        className={styles.serviceDesc}
+                      >
+                        Anim qui consequat deserunt pariatur anim cillum do
+                        reprehenderit. Labore dolor sunt eu Lorem officia
+                        adipisicing et minim et occaecat. Et est aute mollit
+                        ullamco commodo incididunt enim nulla laboris laboris
+                        irure sit enim. Velit velit sint adipisicing fugiat.
+                        Commodo quis exercitation officia dolor. Ullamco
+                        cupidatat incididunt dolore fugiat proident. Sit
+                        exercitation nostrud anim proident incididunt tempor
+                        qui.
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button
+                        variant="outlined"
+                        mt={1}
+                        mb={1}
+                        ml={10}
+                        sx={{
+                          ml: 10,
+                          mt: 2,
+                          width: 200,
+                          height: 60,
+                        }}
+                        className={styles.serviceButton}
+                      >
+                        Learn More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Pulse>
               </Grid>
             </Grid>
           </Box>
@@ -692,175 +723,183 @@ export default function Home(props) {
           >
             <Grid container spacing={2}>
               <Grid item xs={4} className={styles.testimonalsTitle}>
-                <Typography
-                  variant="h2"
-                  component="text"
-                  ml={2}
-                  MR={2}
-                  sx={{
-                    fontWeight: "700",
-                    color: "black",
-                    textAlign: "left",
-                  }}
-                >
-                  LET'S HEAR FROM OUR CLIENTS?
-                </Typography>
+                <Pulse>
+                  <Typography
+                    variant="h2"
+                    component="text"
+                    ml={2}
+                    MR={2}
+                    sx={{
+                      fontWeight: "700",
+                      color: "black",
+                      textAlign: "left",
+                    }}
+                  >
+                    LET'S HEAR FROM OUR CLIENTS?
+                  </Typography>
+                </Pulse>
               </Grid>
               <Grid item xs={8} className={styles.testimonalCards}>
                 <Grid container spacing={2}>
                   <Grid item xs={4}>
-                    <Card
-                      sx={{
-                        maxWidth: 345,
-                        borderWidth: 2,
-                        borderColor: "darkgoldenrod",
-                      }}
-                    >
-                      <CardContent className={styles.serviceCard}>
-                        <Avatar
-                          alt="A"
-                          src="/public/images/header_back3.jpg"
-                          sx={{ width: 150, height: 150 }}
-                        />
+                    <Rotate bottom left>
+                      <Card
+                        sx={{
+                          maxWidth: 345,
+                          borderWidth: 2,
+                          borderColor: "darkgoldenrod",
+                        }}
+                      >
+                        <CardContent className={styles.serviceCard}>
+                          <Avatar
+                            alt="A"
+                            src="/public/images/header_back3.jpg"
+                            sx={{ width: 150, height: 150 }}
+                          />
 
-                        <Typography
-                          variant="body2"
-                          color="text.primary"
-                          className={styles.serviceDesc}
-                        >
-                          <FormatQuoteIcon />
-                          Anim qui consequat deserunt pariatur anim cillum do
-                          reprehenderit. Labore dolor sunt eu Lorem officia
-                          adipisicing et minim et occaecat. Et est aute mollit
-                          ullamco commodo incididunt enim nulla laboris laboris
-                          irure sit enim. Velit velit sint adipisicing fugiat.
-                          Commodo quis exercitation officia dolor. Ullamco
-                          cupidatat incididunt dolore fugiat proident. Sit
-                          exercitation nostrud anim proident incididunt tempor
-                          qui. <FormatQuoteIcon />
-                        </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="h5"
-                          component="div"
-                          className={styles.memberName}
-                        >
-                          Abrham G.
-                        </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="h6"
-                          component="div"
-                          className={styles.memberStatus}
-                        >
-                          CTO
-                        </Typography>
-                      </CardContent>
-                      <CardActions></CardActions>
-                    </Card>
+                          <Typography
+                            variant="body2"
+                            color="text.primary"
+                            className={styles.serviceDesc}
+                          >
+                            <FormatQuoteIcon />
+                            Anim qui consequat deserunt pariatur anim cillum do
+                            reprehenderit. Labore dolor sunt eu Lorem officia
+                            adipisicing et minim et occaecat. Et est aute mollit
+                            ullamco commodo incididunt enim nulla laboris
+                            laboris irure sit enim. Velit velit sint adipisicing
+                            fugiat. Commodo quis exercitation officia dolor.
+                            Ullamco cupidatat incididunt dolore fugiat proident.
+                            Sit exercitation nostrud anim proident incididunt
+                            tempor qui. <FormatQuoteIcon />
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className={styles.memberName}
+                          >
+                            Abrham G.
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            className={styles.memberStatus}
+                          >
+                            CTO
+                          </Typography>
+                        </CardContent>
+                        <CardActions></CardActions>
+                      </Card>
+                    </Rotate>
                   </Grid>
                   <Grid item xs={4}>
-                    <Card
-                      sx={{
-                        maxWidth: 345,
-                        borderWidth: 2,
-                        borderColor: "darkgoldenrod",
-                      }}
-                    >
-                      <CardContent className={styles.serviceCard}>
-                        <Avatar
-                          alt="A"
-                          src="/public/images/header_back3.jpg"
-                          sx={{ width: 150, height: 150 }}
-                        />
+                    <Rotate bottom left>
+                      <Card
+                        sx={{
+                          maxWidth: 345,
+                          borderWidth: 2,
+                          borderColor: "darkgoldenrod",
+                        }}
+                      >
+                        <CardContent className={styles.serviceCard}>
+                          <Avatar
+                            alt="A"
+                            src="/public/images/header_back3.jpg"
+                            sx={{ width: 150, height: 150 }}
+                          />
 
-                        <Typography
-                          variant="body2"
-                          color="text.primary"
-                          className={styles.serviceDesc}
-                        >
-                          <FormatQuoteIcon />
-                          Anim qui consequat deserunt pariatur anim cillum do
-                          reprehenderit. Labore dolor sunt eu Lorem officia
-                          adipisicing et minim et occaecat. Et est aute mollit
-                          ullamco commodo incididunt enim nulla laboris laboris
-                          irure sit enim. Velit velit sint adipisicing fugiat.
-                          Commodo quis exercitation officia dolor. Ullamco
-                          cupidatat incididunt dolore fugiat proident. Sit
-                          exercitation nostrud anim proident incididunt tempor
-                          qui. <FormatQuoteIcon />
-                        </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="h5"
-                          component="div"
-                          className={styles.memberName}
-                        >
-                          Abrham G.
-                        </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="h6"
-                          component="div"
-                          className={styles.memberStatus}
-                        >
-                          CTO
-                        </Typography>
-                      </CardContent>
-                      <CardActions></CardActions>
-                    </Card>
+                          <Typography
+                            variant="body2"
+                            color="text.primary"
+                            className={styles.serviceDesc}
+                          >
+                            <FormatQuoteIcon />
+                            Anim qui consequat deserunt pariatur anim cillum do
+                            reprehenderit. Labore dolor sunt eu Lorem officia
+                            adipisicing et minim et occaecat. Et est aute mollit
+                            ullamco commodo incididunt enim nulla laboris
+                            laboris irure sit enim. Velit velit sint adipisicing
+                            fugiat. Commodo quis exercitation officia dolor.
+                            Ullamco cupidatat incididunt dolore fugiat proident.
+                            Sit exercitation nostrud anim proident incididunt
+                            tempor qui. <FormatQuoteIcon />
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className={styles.memberName}
+                          >
+                            Abrham G.
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            className={styles.memberStatus}
+                          >
+                            CTO
+                          </Typography>
+                        </CardContent>
+                        <CardActions></CardActions>
+                      </Card>
+                    </Rotate>
                   </Grid>
                   <Grid item xs={4}>
-                    <Card
-                      sx={{
-                        maxWidth: 345,
-                        borderWidth: 2,
-                        borderColor: "darkgoldenrod",
-                        boxShadow: 6,
-                      }}
-                    >
-                      <CardContent className={styles.serviceCard}>
-                        <Avatar
-                          alt="A"
-                          src="/public/images/header_back3.jpg"
-                          sx={{ width: 150, height: 150 }}
-                        />
+                    <Rotate bottom left>
+                      <Card
+                        sx={{
+                          maxWidth: 345,
+                          borderWidth: 2,
+                          borderColor: "darkgoldenrod",
+                          boxShadow: 6,
+                        }}
+                      >
+                        <CardContent className={styles.serviceCard}>
+                          <Avatar
+                            alt="A"
+                            src="/public/images/header_back3.jpg"
+                            sx={{ width: 150, height: 150 }}
+                          />
 
-                        <Typography
-                          variant="body2"
-                          color="text.primary"
-                          className={styles.serviceDesc}
-                        >
-                          <FormatQuoteIcon />
-                          Anim qui consequat deserunt pariatur anim cillum do
-                          reprehenderit. Labore dolor sunt eu Lorem officia
-                          adipisicing et minim et occaecat. Et est aute mollit
-                          ullamco commodo incididunt enim nulla laboris laboris
-                          irure sit enim. Velit velit sint adipisicing fugiat.
-                          Commodo quis exercitation officia dolor. Ullamco
-                          cupidatat incididunt dolore fugiat proident. Sit
-                          exercitation nostrud anim proident incididunt tempor
-                          qui. <FormatQuoteIcon />
-                        </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="h5"
-                          component="div"
-                          className={styles.memberName}
-                        >
-                          Abrham G.
-                        </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="h6"
-                          component="div"
-                          className={styles.memberStatus}
-                        >
-                          CTO
-                        </Typography>
-                      </CardContent>
-                      <CardActions></CardActions>
-                    </Card>
+                          <Typography
+                            variant="body2"
+                            color="text.primary"
+                            className={styles.serviceDesc}
+                          >
+                            <FormatQuoteIcon />
+                            Anim qui consequat deserunt pariatur anim cillum do
+                            reprehenderit. Labore dolor sunt eu Lorem officia
+                            adipisicing et minim et occaecat. Et est aute mollit
+                            ullamco commodo incididunt enim nulla laboris
+                            laboris irure sit enim. Velit velit sint adipisicing
+                            fugiat. Commodo quis exercitation officia dolor.
+                            Ullamco cupidatat incididunt dolore fugiat proident.
+                            Sit exercitation nostrud anim proident incididunt
+                            tempor qui. <FormatQuoteIcon />
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className={styles.memberName}
+                          >
+                            Abrham G.
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                            className={styles.memberStatus}
+                          >
+                            CTO
+                          </Typography>
+                        </CardContent>
+                        <CardActions></CardActions>
+                      </Card>
+                    </Rotate>
                   </Grid>
                 </Grid>
               </Grid>
@@ -955,7 +994,11 @@ export default function Home(props) {
                 </List>
               </Grid>
               <Grid item xs={4}>
-                <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+                <Typography
+                  sx={{ mt: 4, mb: 2, fontWeight: 600 }}
+                  variant="h6"
+                  component="div"
+                >
                   Find Us On
                 </Typography>
                 <List>
@@ -995,7 +1038,7 @@ export default function Home(props) {
             component="div"
             className={styles.ourLocations}
           >
-            Copyright@2021 campany name
+            Copyright © company-name 2021.
           </Typography>
         </Grid>
       </footer>
