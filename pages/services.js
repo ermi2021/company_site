@@ -109,7 +109,10 @@ export default function Home(props) {
                 <Button sx={{ fontWeight: "700", color: "black" }}>Home</Button>
               </Link>
               <Link href="/services">
-                <Button sx={{ fontWeight: "700", color: "black" }}>
+                <Button
+                  sx={{ fontWeight: "700", color: "black" }}
+                  className={styles.activeLink}
+                >
                   Services
                 </Button>
               </Link>
@@ -135,13 +138,13 @@ export default function Home(props) {
               <KeyboardArrowUpIcon />
             </Fab>
           </ScrollTop>
-          <Box className={styles.mainHeader}>
+          <Box className={styles.otherPagesHeader}>
             <Grid container spacing={2}>
-              <Grid item xs={6} className={styles.getStartedContainer} pl={10}>
+              <Grid item xs={12} className={styles.PageTitleContainer} pl={10}>
                 <Fade top>
                   <Typography
                     ml={10}
-                    variant="h2"
+                    variant="h1"
                     component="div"
                     sx={{
                       fontWeight: "700",
@@ -149,51 +152,10 @@ export default function Home(props) {
                       textAlign: "left",
                     }}
                   >
-                    Welcome
+                    Our Services
                   </Typography>
-                </Fade>
-                <Fade bottom>
-                  <Typography
-                    ml={10}
-                    mt={2}
-                    variant="h5"
-                    component="div"
-                    sx={{
-                      fontWeight: "600",
-                      color: "white",
-                      width: 600,
-                      textAlign: "justify",
-                    }}
-                    className={styles.companyDesc}
-                  >
-                    Incididunt cillum irure proident ea minim magna. Consectetur
-                    ex velit ad non culpa laboris. Et tempor aliqua exercitation
-                    quis nostrud in nisi non exercitation nisi amet quis. Ea
-                    ipsum exercitation anim incididunt excepteur est sunt tempor
-                    sit aliqua nulla. Irure minim culpa aliqua pariatur
-                    occaecat. Cillum mollit sit sint occaecat ullamco do duis
-                    eiusmod aliqua sunt nisi do. Anim sit duis duis irure enim
-                    do est fugiat.
-                  </Typography>
-                </Fade>
-                <Fade left>
-                  <Button
-                    variant="outlined"
-                    mt={2}
-                    ml={10}
-                    sx={{
-                      ml: 10,
-                      mt: 2,
-                      width: 200,
-                      height: 60,
-                    }}
-                    className={styles.getStartedButton}
-                  >
-                    Learn More
-                  </Button>
                 </Fade>
               </Grid>
-              <Grid item xs={4}></Grid>
             </Grid>
           </Box>
           <Box

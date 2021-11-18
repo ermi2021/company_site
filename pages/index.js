@@ -106,7 +106,12 @@ export default function Home(props) {
                 Company Logo
               </Typography>
               <Link href="/">
-                <Button sx={{ fontWeight: "700", color: "black" }}>Home</Button>
+                <Button
+                  sx={{ fontWeight: "700", color: "black" }}
+                  className={styles.activeLink}
+                >
+                  Home
+                </Button>
               </Link>
               <Link href="/services">
                 <Button sx={{ fontWeight: "700", color: "black" }}>
