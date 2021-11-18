@@ -18,6 +18,16 @@ import CardMedia from "@mui/material/CardMedia";
 import RoomServiceIcon from "@mui/icons-material/RoomService";
 import Carousel from "framer-motion-carousel";
 import Avatar from "@mui/material/Avatar";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 export default function Home() {
   const colors = ["#f90", "#ef0", "#e0f"];
@@ -96,8 +106,13 @@ export default function Home() {
               <Grid item xs={4}></Grid>
             </Grid>
           </Box>
-          <Box sx={{ flexGrow: 1 }} className={styles.ourServicesHeader}>
-            <Grid container spacing={2} className={styles.ServicesGrid}>
+          <Box
+            sx={{ flexGrow: 1 }}
+            mt={5}
+            mb={5}
+            className={styles.ourServicesHeader}
+          >
+            <Grid container spacing={2} mt={3} className={styles.ServicesGrid}>
               <Grid item xs={12} className={styles.servicesTitleContainer}>
                 <Typography
                   variant="h2"
@@ -489,8 +504,10 @@ export default function Home() {
             pr={5}
             pt={2}
             pb={2}
-            mt={3}
+            mt={5}
+            mb={5}
             className={styles.teamContainer}
+            container
           >
             <Grid container spacing={2} className={styles.ServicesGrid}>
               <Grid item xs={12} className={styles.servicesTitleContainer}>
@@ -596,10 +613,324 @@ export default function Home() {
               </Grid>
             </Grid>
           </Box>
+          <Box
+            sx={{ flexGrow: 1 }}
+            pl={5}
+            pr={5}
+            pt={2}
+            pb={2}
+            mt={4}
+            className={styles.testimonalContainer}
+          >
+            <Grid container spacing={2}>
+              <Grid item xs={4} className={styles.testimonalsTitle}>
+                <Typography
+                  variant="h2"
+                  component="text"
+                  ml={2}
+                  MR={2}
+                  sx={{
+                    fontWeight: "700",
+                    color: "black",
+                    textAlign: "left",
+                  }}
+                >
+                  LET'S HEAR FROM OUR CLIENTS?
+                </Typography>
+              </Grid>
+              <Grid item xs={8} className={styles.testimonalCards}>
+                <Grid container spacing={2}>
+                  <Grid item xs={4}>
+                    <Card
+                      sx={{
+                        maxWidth: 345,
+                        borderWidth: 2,
+                        borderColor: "darkgoldenrod",
+                      }}
+                    >
+                      <CardContent className={styles.serviceCard}>
+                        <Avatar
+                          alt="A"
+                          src="/public/images/header_back3.jpg"
+                          sx={{ width: 150, height: 150 }}
+                        />
+
+                        <Typography
+                          variant="body2"
+                          color="text.primary"
+                          className={styles.serviceDesc}
+                        >
+                          <FormatQuoteIcon />
+                          Anim qui consequat deserunt pariatur anim cillum do
+                          reprehenderit. Labore dolor sunt eu Lorem officia
+                          adipisicing et minim et occaecat. Et est aute mollit
+                          ullamco commodo incididunt enim nulla laboris laboris
+                          irure sit enim. Velit velit sint adipisicing fugiat.
+                          Commodo quis exercitation officia dolor. Ullamco
+                          cupidatat incididunt dolore fugiat proident. Sit
+                          exercitation nostrud anim proident incididunt tempor
+                          qui. <FormatQuoteIcon />
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className={styles.memberName}
+                        >
+                          Abrham G.
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h6"
+                          component="div"
+                          className={styles.memberStatus}
+                        >
+                          CTO
+                        </Typography>
+                      </CardContent>
+                      <CardActions></CardActions>
+                    </Card>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Card
+                      sx={{
+                        maxWidth: 345,
+                        borderWidth: 2,
+                        borderColor: "darkgoldenrod",
+                      }}
+                    >
+                      <CardContent className={styles.serviceCard}>
+                        <Avatar
+                          alt="A"
+                          src="/public/images/header_back3.jpg"
+                          sx={{ width: 150, height: 150 }}
+                        />
+
+                        <Typography
+                          variant="body2"
+                          color="text.primary"
+                          className={styles.serviceDesc}
+                        >
+                          <FormatQuoteIcon />
+                          Anim qui consequat deserunt pariatur anim cillum do
+                          reprehenderit. Labore dolor sunt eu Lorem officia
+                          adipisicing et minim et occaecat. Et est aute mollit
+                          ullamco commodo incididunt enim nulla laboris laboris
+                          irure sit enim. Velit velit sint adipisicing fugiat.
+                          Commodo quis exercitation officia dolor. Ullamco
+                          cupidatat incididunt dolore fugiat proident. Sit
+                          exercitation nostrud anim proident incididunt tempor
+                          qui. <FormatQuoteIcon />
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className={styles.memberName}
+                        >
+                          Abrham G.
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h6"
+                          component="div"
+                          className={styles.memberStatus}
+                        >
+                          CTO
+                        </Typography>
+                      </CardContent>
+                      <CardActions></CardActions>
+                    </Card>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Card
+                      sx={{
+                        maxWidth: 345,
+                        borderWidth: 2,
+                        borderColor: "darkgoldenrod",
+                        boxShadow: 6,
+                      }}
+                    >
+                      <CardContent className={styles.serviceCard}>
+                        <Avatar
+                          alt="A"
+                          src="/public/images/header_back3.jpg"
+                          sx={{ width: 150, height: 150 }}
+                        />
+
+                        <Typography
+                          variant="body2"
+                          color="text.primary"
+                          className={styles.serviceDesc}
+                        >
+                          <FormatQuoteIcon />
+                          Anim qui consequat deserunt pariatur anim cillum do
+                          reprehenderit. Labore dolor sunt eu Lorem officia
+                          adipisicing et minim et occaecat. Et est aute mollit
+                          ullamco commodo incididunt enim nulla laboris laboris
+                          irure sit enim. Velit velit sint adipisicing fugiat.
+                          Commodo quis exercitation officia dolor. Ullamco
+                          cupidatat incididunt dolore fugiat proident. Sit
+                          exercitation nostrud anim proident incididunt tempor
+                          qui. <FormatQuoteIcon />
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className={styles.memberName}
+                        >
+                          Abrham G.
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h6"
+                          component="div"
+                          className={styles.memberStatus}
+                        >
+                          CTO
+                        </Typography>
+                      </CardContent>
+                      <CardActions></CardActions>
+                    </Card>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Box>
         </Box>
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <Grid container spacing={2}>
+          <Grid item xs={4} className={styles.footerLogo}>
+            <Typography
+              variant="h4"
+              component="text"
+              ml={2}
+              MR={2}
+              sx={{
+                fontWeight: "700",
+                color: "black",
+                textAlign: "left",
+              }}
+            >
+              COMPANY LOGO
+            </Typography>
+            <Typography
+              variant="h6"
+              component="text"
+              ml={2}
+              MR={2}
+              sx={{
+                fontWeight: "700",
+                color: "black",
+                textAlign: "left",
+              }}
+            >
+              Short description about the company will go here.
+            </Typography>
+          </Grid>
+          <Grid item xs={8} className={styles.footerLinks}>
+            <Grid container spacing={2}>
+              <Grid item xs={4} pb={2}>
+                <Typography
+                  sx={{ mt: 4, mb: 2, fontWeight: 600 }}
+                  variant="h6"
+                  component="div"
+                >
+                  Our Services
+                </Typography>
+                <List>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemText primary="Service 1" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton component="a" href="#simple-list">
+                      <ListItemText primary="Service 2" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemText primary="Service 3" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item xs={4}>
+                <Typography
+                  sx={{ mt: 4, mb: 2, fontWeight: 600 }}
+                  variant="h6"
+                  component="div"
+                  className={styles.ourLocations}
+                >
+                  Our Locations
+                </Typography>
+                <List>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemText primary="Location 1" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton component="a" href="#simple-list">
+                      <ListItemText primary="Location 2" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemText primary="Location 3" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item xs={4}>
+                <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+                  Find Us On
+                </Typography>
+                <List>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemIcon>
+                        <FacebookIcon />
+                      </ListItemIcon>
+                      <ListItemText primary="Facebook" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton component="a" href="#simple-list">
+                      <ListItemIcon>
+                        <LinkedInIcon />
+                      </ListItemIcon>
+                      <ListItemText primary="LinkedIn" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemIcon>
+                        <TwitterIcon />
+                      </ListItemIcon>
+                      <ListItemText primary="Twitter" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} className={styles.footerCP}>
+          <Typography
+            sx={{ mt: 4, mb: 2, fontWeight: 600 }}
+            variant="body2"
+            component="div"
+            className={styles.ourLocations}
+          >
+            Copyright@2021 campany name
+          </Typography>
+        </Grid>
+      </footer>
     </div>
   );
 }
