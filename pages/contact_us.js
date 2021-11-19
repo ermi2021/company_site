@@ -37,6 +37,8 @@ import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
 import Rotate from "react-reveal/Rotate";
 import Link from "next/link";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -152,728 +154,102 @@ export default function Home(props) {
                       textAlign: "left",
                     }}
                   >
-                    Contact Us
+                    Get in touch
+                  </Typography>
+                </Fade>
+                <Fade bottom>
+                  <Typography
+                    ml={10}
+                    variant="h4"
+                    component="div"
+                    sx={{
+                      fontWeight: "700",
+                      color: "white",
+                      textAlign: "left",
+                    }}
+                  >
+                    We are happy to get in touch with you
                   </Typography>
                 </Fade>
               </Grid>
             </Grid>
           </Box>
-          <Box
-            sx={{ flexGrow: 1 }}
-            mt={5}
-            mb={5}
-            className={styles.ourServicesHeader}
-          >
-            <Grid container spacing={2} mt={3} className={styles.ServicesGrid}>
-              <Grid item xs={12} className={styles.servicesTitleContainer}>
-                <Typography
-                  variant="h2"
-                  component="div"
-                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
-                >
-                  Our Services
-                </Typography>
-                <Typography
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
-                >
-                  These are services we are good doing at
-                </Typography>
-              </Grid>
-            </Grid>
-          </Box>
 
           <Box
             sx={{ flexGrow: 1 }}
-            ml={4}
-            pl={5}
-            pr={5}
-            pt={2}
-            pb={2}
-            mr={4}
-            className={styles.servicesBox}
-          >
-            <Grid container spacing={2} ml={2} mt={2}>
-              <Grid item xs={4} className={styles.serviceContainer}>
-                <Pulse>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      borderWidth: 2,
-                      borderColor: "darkgoldenrod",
-                    }}
-                  >
-                    <CardContent className={styles.serviceCard}>
-                      <RoomServiceIcon
-                        sx={{
-                          fontSize: 120,
-                          textAlign: "center",
-                          color: "golden",
-                        }}
-                        className={styles.serviceIcon}
-                      />
-                      <Typography
-                        gutterBottom
-                        variant="h4"
-                        component="div"
-                        className={styles.serviceTitle}
-                      >
-                        Service 1
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        className={styles.serviceDesc}
-                      >
-                        Anim qui consequat deserunt pariatur anim cillum do
-                        reprehenderit. Labore dolor sunt eu Lorem officia
-                        adipisicing et minim et occaecat. Et est aute mollit
-                        ullamco commodo incididunt enim nulla laboris laboris
-                        irure sit enim. Velit velit sint adipisicing fugiat.
-                        Commodo quis exercitation officia dolor. Ullamco
-                        cupidatat incididunt dolore fugiat proident. Sit
-                        exercitation nostrud anim proident incididunt tempor
-                        qui.
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        variant="outlined"
-                        mt={1}
-                        mb={1}
-                        ml={10}
-                        sx={{
-                          ml: 10,
-                          mt: 2,
-                          width: 200,
-                          height: 60,
-                        }}
-                        className={styles.serviceButton}
-                      >
-                        Learn More
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Pulse>
-              </Grid>
-              <Grid item xs={4} className={styles.serviceContainer}>
-                <Pulse>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      borderWidth: 2,
-                      borderColor: "darkgoldenrod",
-                    }}
-                  >
-                    <CardContent className={styles.serviceCard}>
-                      <RoomServiceIcon
-                        sx={{
-                          fontSize: 120,
-                          textAlign: "center",
-                          color: "golden",
-                        }}
-                        className={styles.serviceIcon}
-                      />
-                      <Typography
-                        gutterBottom
-                        variant="h4"
-                        component="div"
-                        className={styles.serviceTitle}
-                      >
-                        Service 1
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        className={styles.serviceDesc}
-                      >
-                        Anim qui consequat deserunt pariatur anim cillum do
-                        reprehenderit. Labore dolor sunt eu Lorem officia
-                        adipisicing et minim et occaecat. Et est aute mollit
-                        ullamco commodo incididunt enim nulla laboris laboris
-                        irure sit enim. Velit velit sint adipisicing fugiat.
-                        Commodo quis exercitation officia dolor. Ullamco
-                        cupidatat incididunt dolore fugiat proident. Sit
-                        exercitation nostrud anim proident incididunt tempor
-                        qui.
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        variant="outlined"
-                        mt={1}
-                        mb={1}
-                        ml={10}
-                        sx={{
-                          ml: 10,
-                          mt: 2,
-                          width: 200,
-                          height: 60,
-                        }}
-                        className={styles.serviceButton}
-                      >
-                        Learn More
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Pulse>
-              </Grid>
-              <Grid item xs={4} className={styles.serviceContainer}>
-                <Pulse>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      borderWidth: 2,
-                      borderColor: "darkgoldenrod",
-                    }}
-                  >
-                    <CardContent className={styles.serviceCard}>
-                      <RoomServiceIcon
-                        sx={{
-                          fontSize: 120,
-                          textAlign: "center",
-                          color: "golden",
-                        }}
-                        className={styles.serviceIcon}
-                      />
-                      <Typography
-                        gutterBottom
-                        variant="h4"
-                        component="div"
-                        className={styles.serviceTitle}
-                      >
-                        Service 1
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        className={styles.serviceDesc}
-                      >
-                        Anim qui consequat deserunt pariatur anim cillum do
-                        reprehenderit. Labore dolor sunt eu Lorem officia
-                        adipisicing et minim et occaecat. Et est aute mollit
-                        ullamco commodo incididunt enim nulla laboris laboris
-                        irure sit enim. Velit velit sint adipisicing fugiat.
-                        Commodo quis exercitation officia dolor. Ullamco
-                        cupidatat incididunt dolore fugiat proident. Sit
-                        exercitation nostrud anim proident incididunt tempor
-                        qui.
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        variant="outlined"
-                        mt={1}
-                        mb={1}
-                        ml={10}
-                        sx={{
-                          ml: 10,
-                          mt: 2,
-                          width: 200,
-                          height: 60,
-                        }}
-                        className={styles.serviceButton}
-                      >
-                        Learn More
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Pulse>
-              </Grid>
-              <Grid item xs={4} className={styles.serviceContainer}>
-                <Pulse>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      borderWidth: 2,
-                      borderColor: "darkgoldenrod",
-                    }}
-                  >
-                    <CardContent className={styles.serviceCard}>
-                      <RoomServiceIcon
-                        sx={{
-                          fontSize: 120,
-                          textAlign: "center",
-                          color: "golden",
-                        }}
-                        className={styles.serviceIcon}
-                      />
-                      <Typography
-                        gutterBottom
-                        variant="h4"
-                        component="div"
-                        className={styles.serviceTitle}
-                      >
-                        Service 2
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        className={styles.serviceDesc}
-                      >
-                        Anim qui consequat deserunt pariatur anim cillum do
-                        reprehenderit. Labore dolor sunt eu Lorem officia
-                        adipisicing et minim et occaecat. Et est aute mollit
-                        ullamco commodo incididunt enim nulla laboris laboris
-                        irure sit enim. Velit velit sint adipisicing fugiat.
-                        Commodo quis exercitation officia dolor. Ullamco
-                        cupidatat incididunt dolore fugiat proident. Sit
-                        exercitation nostrud anim proident incididunt tempor
-                        qui.
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        variant="outlined"
-                        mt={1}
-                        mb={1}
-                        ml={10}
-                        sx={{
-                          ml: 10,
-                          mt: 2,
-                          width: 200,
-                          height: 60,
-                        }}
-                        className={styles.serviceButton}
-                      >
-                        Learn More
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Pulse>
-              </Grid>
-              <Grid item xs={4} className={styles.serviceContainer}>
-                <Pulse>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      borderWidth: 2,
-                      borderColor: "darkgoldenrod",
-                    }}
-                  >
-                    <CardContent className={styles.serviceCard}>
-                      <RoomServiceIcon
-                        sx={{
-                          fontSize: 120,
-                          textAlign: "center",
-                          color: "golden",
-                        }}
-                        className={styles.serviceIcon}
-                      />
-                      <Typography
-                        gutterBottom
-                        variant="h4"
-                        component="div"
-                        className={styles.serviceTitle}
-                      >
-                        Service 3
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        className={styles.serviceDesc}
-                      >
-                        Anim qui consequat deserunt pariatur anim cillum do
-                        reprehenderit. Labore dolor sunt eu Lorem officia
-                        adipisicing et minim et occaecat. Et est aute mollit
-                        ullamco commodo incididunt enim nulla laboris laboris
-                        irure sit enim. Velit velit sint adipisicing fugiat.
-                        Commodo quis exercitation officia dolor. Ullamco
-                        cupidatat incididunt dolore fugiat proident. Sit
-                        exercitation nostrud anim proident incididunt tempor
-                        qui.
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        variant="outlined"
-                        mt={1}
-                        mb={1}
-                        ml={10}
-                        sx={{
-                          ml: 10,
-                          mt: 2,
-                          width: 200,
-                          height: 60,
-                        }}
-                        className={styles.serviceButton}
-                      >
-                        Learn More
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Pulse>
-              </Grid>
-              <Grid item xs={4} className={styles.serviceContainer}>
-                <Pulse>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      borderWidth: 2,
-                      borderColor: "darkgoldenrod",
-                    }}
-                  >
-                    <CardContent className={styles.serviceCard}>
-                      <RoomServiceIcon
-                        sx={{
-                          fontSize: 120,
-                          textAlign: "center",
-                        }}
-                        className={styles.serviceIcon}
-                      />
-                      <Typography
-                        gutterBottom
-                        variant="h4"
-                        component="div"
-                        className={styles.serviceTitle}
-                      >
-                        Service 4
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        className={styles.serviceDesc}
-                      >
-                        Anim qui consequat deserunt pariatur anim cillum do
-                        reprehenderit. Labore dolor sunt eu Lorem officia
-                        adipisicing et minim et occaecat. Et est aute mollit
-                        ullamco commodo incididunt enim nulla laboris laboris
-                        irure sit enim. Velit velit sint adipisicing fugiat.
-                        Commodo quis exercitation officia dolor. Ullamco
-                        cupidatat incididunt dolore fugiat proident. Sit
-                        exercitation nostrud anim proident incididunt tempor
-                        qui.
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        variant="outlined"
-                        mt={1}
-                        mb={1}
-                        ml={10}
-                        sx={{
-                          ml: 10,
-                          mt: 2,
-                          width: 200,
-                          height: 60,
-                        }}
-                        className={styles.serviceButton}
-                      >
-                        Learn More
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Pulse>
-              </Grid>
-            </Grid>
-          </Box>
-
-          <Box
-            sx={{ flexGrow: 1 }}
-            pl={5}
-            pr={5}
-            pt={2}
-            pb={2}
-            mt={5}
-            mb={5}
-            className={styles.teamContainer}
-            container
-          >
-            <Grid container spacing={2} className={styles.ServicesGrid}>
-              <Grid item xs={12} className={styles.servicesTitleContainer}>
-                <Typography
-                  variant="h2"
-                  component="div"
-                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
-                >
-                  Our Team
-                </Typography>
-                <Typography
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: "700", color: "black", textAlign: "left" }}
-                >
-                  Meet our exprienced team
-                </Typography>
-              </Grid>
-              <Grid item xs={12} className={styles.teamCaraouselContainer}>
-                <Carousel interval="6000">
-                  {[1, 2, 3].map((item, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                      }}
-                    >
-                      <Grid container spacing={2} className={styles.carousel}>
-                        <Grid item xs={4} className={styles.serviceContainer}>
-                          <Avatar
-                            alt="A"
-                            src="/public/images/header_back3.jpg"
-                            sx={{ width: 250, height: 250 }}
-                          />
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            className={styles.memberName}
-                          >
-                            Abrham G.
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                            className={styles.memberStatus}
-                          >
-                            CTO
-                          </Typography>
-                        </Grid>
-                        <Grid item xs={4} className={styles.serviceContainer}>
-                          <Avatar
-                            alt="A"
-                            src="/public/images/header_back3.jpg"
-                            sx={{ width: 250, height: 250 }}
-                          />
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            className={styles.memberName}
-                          >
-                            Abrham G.
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                            className={styles.memberStatus}
-                          >
-                            CTO
-                          </Typography>
-                        </Grid>
-                        <Grid item xs={4} className={styles.serviceContainer}>
-                          <Avatar
-                            alt="A"
-                            src="/public/images/header_back3.jpg"
-                            sx={{ width: 250, height: 250 }}
-                          />
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            className={styles.memberName}
-                          >
-                            Abrham G.
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                            className={styles.memberStatus}
-                          >
-                            CTO
-                          </Typography>
-                        </Grid>
-                      </Grid>
-                    </div>
-                  ))}
-                </Carousel>
-              </Grid>
-            </Grid>
-          </Box>
-          <Box
-            sx={{ flexGrow: 1 }}
-            pl={5}
-            pr={5}
+            pl={25}
+            pr={25}
             pt={2}
             pb={2}
             mt={4}
             className={styles.testimonalContainer}
           >
             <Grid container spacing={2}>
-              <Grid item xs={4} className={styles.testimonalsTitle}>
+              <Grid item xs={8} className={styles.contactCards}>
+                <Grid item xs={12}></Grid>
+                <Grid item xs={12}></Grid>
+              </Grid>
+              <Grid item xs={4} className={styles.contactusTitle}>
                 <Pulse>
                   <Typography
-                    variant="h2"
+                    variant="h5"
                     component="text"
                     ml={2}
-                    MR={2}
+                    mr={2}
                     sx={{
                       fontWeight: "700",
                       color: "black",
                       textAlign: "left",
                     }}
                   >
-                    LET`S HEAR FROM OUR CLIENTS?
+                    Contact Information
                   </Typography>
+                  <List>
+                    <ListItem>
+                      <ListItemButton>
+                        <ListItemIcon>
+                          <LocationOnIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary="Head Office"
+                          secondary="Specific location"
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemButton>
+                        <ListItemIcon>
+                          <LocationOnIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary="branch office"
+                          secondary="Specific location"
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemButton>
+                        <ListItemIcon>
+                          <LocalPhoneIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary="+251 913 38 61 81"
+                          secondary="+251 913 38 61 81"
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemButton component="a" href="#simple-list">
+                        <ListItemText primary="Service 2" />
+                      </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemButton>
+                        <ListItemText primary="Service 3" />
+                      </ListItemButton>
+                    </ListItem>
+                  </List>
                 </Pulse>
-              </Grid>
-              <Grid item xs={8} className={styles.testimonalCards}>
-                <Grid container spacing={2}>
-                  <Grid item xs={4}>
-                    <Rotate bottom left>
-                      <Card
-                        sx={{
-                          maxWidth: 345,
-                          borderWidth: 2,
-                          borderColor: "darkgoldenrod",
-                        }}
-                      >
-                        <CardContent className={styles.serviceCard}>
-                          <Avatar
-                            alt="A"
-                            src="/public/images/header_back3.jpg"
-                            sx={{ width: 150, height: 150 }}
-                          />
-
-                          <Typography
-                            variant="body2"
-                            color="text.primary"
-                            className={styles.serviceDesc}
-                          >
-                            <FormatQuoteIcon />
-                            Anim qui consequat deserunt pariatur anim cillum do
-                            reprehenderit. Labore dolor sunt eu Lorem officia
-                            adipisicing et minim et occaecat. Et est aute mollit
-                            ullamco commodo incididunt enim nulla laboris
-                            laboris irure sit enim. Velit velit sint adipisicing
-                            fugiat. Commodo quis exercitation officia dolor.
-                            Ullamco cupidatat incididunt dolore fugiat proident.
-                            Sit exercitation nostrud anim proident incididunt
-                            tempor qui. <FormatQuoteIcon />
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            className={styles.memberName}
-                          >
-                            Abrham G.
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                            className={styles.memberStatus}
-                          >
-                            CTO
-                          </Typography>
-                        </CardContent>
-                        <CardActions></CardActions>
-                      </Card>
-                    </Rotate>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Rotate bottom left>
-                      <Card
-                        sx={{
-                          maxWidth: 345,
-                          borderWidth: 2,
-                          borderColor: "darkgoldenrod",
-                        }}
-                      >
-                        <CardContent className={styles.serviceCard}>
-                          <Avatar
-                            alt="A"
-                            src="/public/images/header_back3.jpg"
-                            sx={{ width: 150, height: 150 }}
-                          />
-
-                          <Typography
-                            variant="body2"
-                            color="text.primary"
-                            className={styles.serviceDesc}
-                          >
-                            <FormatQuoteIcon />
-                            Anim qui consequat deserunt pariatur anim cillum do
-                            reprehenderit. Labore dolor sunt eu Lorem officia
-                            adipisicing et minim et occaecat. Et est aute mollit
-                            ullamco commodo incididunt enim nulla laboris
-                            laboris irure sit enim. Velit velit sint adipisicing
-                            fugiat. Commodo quis exercitation officia dolor.
-                            Ullamco cupidatat incididunt dolore fugiat proident.
-                            Sit exercitation nostrud anim proident incididunt
-                            tempor qui. <FormatQuoteIcon />
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            className={styles.memberName}
-                          >
-                            Abrham G.
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                            className={styles.memberStatus}
-                          >
-                            CTO
-                          </Typography>
-                        </CardContent>
-                        <CardActions></CardActions>
-                      </Card>
-                    </Rotate>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Rotate bottom left>
-                      <Card
-                        sx={{
-                          maxWidth: 345,
-                          borderWidth: 2,
-                          borderColor: "darkgoldenrod",
-                          boxShadow: 6,
-                        }}
-                      >
-                        <CardContent className={styles.serviceCard}>
-                          <Avatar
-                            alt="A"
-                            src="/public/images/header_back3.jpg"
-                            sx={{ width: 150, height: 150 }}
-                          />
-
-                          <Typography
-                            variant="body2"
-                            color="text.primary"
-                            className={styles.serviceDesc}
-                          >
-                            <FormatQuoteIcon />
-                            Anim qui consequat deserunt pariatur anim cillum do
-                            reprehenderit. Labore dolor sunt eu Lorem officia
-                            adipisicing et minim et occaecat. Et est aute mollit
-                            ullamco commodo incididunt enim nulla laboris
-                            laboris irure sit enim. Velit velit sint adipisicing
-                            fugiat. Commodo quis exercitation officia dolor.
-                            Ullamco cupidatat incididunt dolore fugiat proident.
-                            Sit exercitation nostrud anim proident incididunt
-                            tempor qui. <FormatQuoteIcon />
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            className={styles.memberName}
-                          >
-                            Abrham G.
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                            className={styles.memberStatus}
-                          >
-                            CTO
-                          </Typography>
-                        </CardContent>
-                        <CardActions></CardActions>
-                      </Card>
-                    </Rotate>
-                  </Grid>
-                </Grid>
               </Grid>
             </Grid>
           </Box>
@@ -921,17 +297,17 @@ export default function Home(props) {
                   Our Services
                 </Typography>
                 <List>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton>
                       <ListItemText primary="Service 1" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton component="a" href="#simple-list">
                       <ListItemText primary="Service 2" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton>
                       <ListItemText primary="Service 3" />
                     </ListItemButton>
@@ -948,17 +324,17 @@ export default function Home(props) {
                   Our Locations
                 </Typography>
                 <List>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton>
                       <ListItemText primary="Location 1" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton component="a" href="#simple-list">
                       <ListItemText primary="Location 2" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton>
                       <ListItemText primary="Location 3" />
                     </ListItemButton>
@@ -974,7 +350,7 @@ export default function Home(props) {
                   Find Us On
                 </Typography>
                 <List>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton>
                       <ListItemIcon>
                         <FacebookIcon />
@@ -982,7 +358,7 @@ export default function Home(props) {
                       <ListItemText primary="Facebook" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton component="a" href="#simple-list">
                       <ListItemIcon>
                         <LinkedInIcon />
@@ -990,7 +366,7 @@ export default function Home(props) {
                       <ListItemText primary="LinkedIn" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem>
                     <ListItemButton>
                       <ListItemIcon>
                         <TwitterIcon />

@@ -57,9 +57,15 @@
   align-items: center;
   justify-content: center;
 }
+.formContainer {
+  background-color: teal;
+}
+.formImageContainer {
+  background-color: tomato;
+}
 .accordion {
   width: 80%;
-  background-color: rgba(0, 0, 0, 0.603);
+  background-color: rgba(0, 0, 0, 0.815);
   border-radius: "0%";
 }
 .accordionTitle {
@@ -143,7 +149,23 @@
   background-color: rgba(255, 217, 0, 0.555);
   height: 70vh;
 }
+
+.contactusTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  background-color: rgba(255, 217, 0, 0.555);
+  height: 70vh;
+}
+
 .testimonalCards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.829);
+  height: 70vh;
+}
+.contactCards{
   display: flex;
   flex-direction: column;
   justify-content: center;
