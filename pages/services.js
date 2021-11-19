@@ -155,6 +155,20 @@ export default function Home(props) {
                     Our Services
                   </Typography>
                 </Fade>
+                <Fade bottom>
+                  <Typography
+                    ml={10}
+                    variant="h4"
+                    component="div"
+                    sx={{
+                      fontWeight: "700",
+                      color: "white",
+                      textAlign: "left",
+                    }}
+                  >
+                    We are happy to provide you the following services!
+                  </Typography>
+                </Fade>
               </Grid>
             </Grid>
           </Box>

@@ -57,6 +57,17 @@
   align-items: center;
   justify-content: center;
 }
+.accordion {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.603);
+  border-radius: "0%";
+}
+.accordionTitle {
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .ServicesGrid{
   flex: 1;
   display: flex;
