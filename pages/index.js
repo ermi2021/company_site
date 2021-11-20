@@ -150,6 +150,10 @@ export default function Home(props) {
               size="large"
               aria-label="scroll back to top"
               className={styles.fab}
+              style={{
+                backgroundColor: "gold",
+                color: "black",
+              }}
             >
               <KeyboardArrowUpIcon />
             </Fab>
