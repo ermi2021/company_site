@@ -96,7 +96,13 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static" className={styles.appBar}>
+          <AppBar
+            position="static"
+            className={styles.appBar}
+            style={{
+              backgroundColor: "rgba(255, 217, 0, 0.712)",
+            }}
+          >
             <Toolbar variant="dense">
               <Typography
                 variant="h5"
@@ -109,6 +115,14 @@ export default function Home(props) {
                 <Button
                   sx={{ fontWeight: "700", color: "black" }}
                   className={styles.activeLink}
+                  style={{
+                    marginRight: "1rem",
+                    marginLeft: "1rem",
+                    fontFamily: "cursive",
+                    fontWeight: "bolder",
+                    borderBottom: "2px solid black",
+                    borderRadius: "0%",
+                  }}
                 >
                   Home
                 </Button>
@@ -142,7 +156,21 @@ export default function Home(props) {
           </ScrollTop>
           <Box className={styles.mainHeader}>
             <Grid container spacing={2}>
-              <Grid item xs={6} className={styles.getStartedContainer} pl={10}>
+              <Grid
+                item
+                xs={6}
+                className={styles.getStartedContainer}
+                pl={10}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "left",
+                  minHeight: "70vh",
+                  flex: "1",
+                  minHeight: "70vh",
+                }}
+              >
                 <Fade top>
                   <Typography
                     ml={10}
@@ -193,6 +221,11 @@ export default function Home(props) {
                       height: 60,
                     }}
                     className={styles.getStartedButton}
+                    style={{
+                      borderColor: "gold",
+                      color: "white",
+                      fontWeight: "bold",
+                    }}
                   >
                     Learn More
                   </Button>
@@ -207,8 +240,32 @@ export default function Home(props) {
             mb={5}
             className={styles.ourServicesHeader}
           >
-            <Grid container spacing={2} mt={3} className={styles.ServicesGrid}>
-              <Grid item xs={12} className={styles.servicesTitleContainer}>
+            <Grid
+              container
+              spacing={2}
+              mt={3}
+              className={styles.ServicesGrid}
+              style={{
+                flex: "1",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                className={styles.servicesTitleContainer}
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  paddingTop: "1rem",
+                }}
+              >
                 <Typography
                   variant="h2"
                   component="div"
@@ -623,8 +680,31 @@ export default function Home(props) {
             className={styles.teamContainer}
             container
           >
-            <Grid container spacing={2} className={styles.ServicesGrid}>
-              <Grid item xs={12} className={styles.servicesTitleContainer}>
+            <Grid
+              container
+              spacing={2}
+              className={styles.ServicesGrid}
+              style={{
+                flex: "1",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                className={styles.servicesTitleContainer}
+                style={{
+                  flex: "1",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  paddingTop: "1rem",
+                }}
+              >
                 <Typography
                   variant="h2"
                   component="div"
@@ -650,8 +730,26 @@ export default function Home(props) {
                         height: "100%",
                       }}
                     >
-                      <Grid container spacing={2} className={styles.carousel}>
-                        <Grid item xs={4} className={styles.serviceContainer}>
+                      <Grid
+                        container
+                        spacing={2}
+                        className={styles.carousel}
+                        style={{
+                          marginTop: "5rem",
+                          marginBottom: "6rem",
+                        }}
+                      >
+                        <Grid
+                          item
+                          xs={4}
+                          className={styles.serviceContainer}
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
                           <Avatar
                             alt="A"
                             src="/public/images/header_back3.jpg"
@@ -735,9 +833,24 @@ export default function Home(props) {
             pb={2}
             mt={4}
             className={styles.testimonalContainer}
+            style={{
+              height: "70vh",
+              backgroundColor: "white",
+            }}
           >
             <Grid container spacing={2}>
-              <Grid item xs={4} className={styles.testimonalsTitle}>
+              <Grid
+                item
+                xs={4}
+                className={styles.testimonalsTitle}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  backgroundColor: "rgba(255, 217, 0, 0.555)",
+                  height: "70vh",
+                }}
+              >
                 <Pulse>
                   <Typography
                     variant="h2"
@@ -754,7 +867,18 @@ export default function Home(props) {
                   </Typography>
                 </Pulse>
               </Grid>
-              <Grid item xs={8} className={styles.testimonalCards}>
+              <Grid
+                item
+                xs={8}
+                className={styles.testimonalCards}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  backgroundColor: "rgba(0, 0, 0, 0.829)",
+                  height: "70vh",
+                }}
+              >
                 <Grid container spacing={2}>
                   <Grid item xs={4}>
                     <Rotate bottom left>
@@ -925,7 +1049,18 @@ export default function Home(props) {
 
       <footer className={styles.footer}>
         <Grid container spacing={2}>
-          <Grid item xs={4} className={styles.footerLogo}>
+          <Grid
+            item
+            xs={4}
+            className={styles.footerLogo}
+            style={{
+              height: "30vh",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "left",
+            }}
+          >
             <Typography
               variant="h4"
               component="text"

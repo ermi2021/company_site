@@ -33,23 +33,14 @@
   padding-right: 2rem;
 }
 .ourServicesHeader {
-  
   background-color: white;
- 
   /* justify-content: center; */
 }
 .servicesBox {
   min-height:70vh;
   /* background-color: #f6f6f6; */
 }
-.servicesTitleContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-}
+
 .serviceContainer {
   /* background-color: #f6f6f6; */
   display: flex;
@@ -74,13 +65,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.ServicesGrid{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .serviceCard {
   display: flex;
   flex-direction: column;
@@ -122,11 +107,7 @@
 .teamCaraouselContainer {
   /* background-color: darkorange; */
 }
-.carousel{
-  margin-top: 5rem;
-  margin-bottom: 6rem;
-  /* background-color: gold; */
-}
+
 .teamContainer {
   height: 70vh;
   background-color: rgba(255, 217, 0, 0.712);
@@ -193,16 +174,7 @@
 .contactInfo2 {
   background-color: teal;
 }
-.getStartedContainer{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  text-align: left;
-  min-height: 70vh;
-  
-}
+
 
 .PageTitleContainer{
   flex: 1;
@@ -222,11 +194,6 @@
 
 }
 
-.contactUsBut {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
 
 .servicePic {
   /* background-color: brown; */
@@ -243,11 +210,6 @@
   border-bottom: 5px solid rgb(250, 225, 0);
 }
 
-.getStartedButton {
-   border-color: gold; 
-   color: white;
-   font-weight: bold;
-}
 
 .companyDesc {
    text-align: justify;
@@ -260,13 +222,7 @@
 .footerGridContiner {
 
 }
-.footerLogo {
-   height:30vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: left;
-}
+
 .footerLinks {
   height:30vh;
   padding-bottom: 1rem;
@@ -292,16 +248,11 @@
   padding: 2rem;
   /* padding-left: 2rem;
   padding-right: 2rem;  */
-  background-color: rgba(255, 217, 0, 0.712);
+  /* background-color: rgba(255, 217, 0, 0.712); */
   height: 11vh;
   justify-content: center;
 }
-.activeLink {
-  margin-right: 1rem;
-   font-family: cursive;
-   font-weight: bolder;
-   border-bottom: 2px solid black;
-}
+
 .fab {
   background-color: gold;
   color: black;

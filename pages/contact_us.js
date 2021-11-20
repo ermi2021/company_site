@@ -100,7 +100,13 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static" className={styles.appBar}>
+          <AppBar
+            position="static"
+            className={styles.appBar}
+            style={{
+              backgroundColor: "rgba(255, 217, 0, 0.712)",
+            }}
+          >
             <Toolbar variant="dense">
               <Typography
                 variant="h5"
@@ -110,7 +116,12 @@ export default function Home(props) {
                 Company Logo
               </Typography>
               <Link href="/">
-                <Button sx={{ fontWeight: "700", color: "black" }}>Home</Button>
+                <Button
+                  sx={{ fontWeight: "700", color: "black" }}
+                  className={styles.activeLink}
+                >
+                  Home
+                </Button>
               </Link>
               <Link href="/services">
                 <Button sx={{ fontWeight: "700", color: "black" }}>
@@ -125,7 +136,14 @@ export default function Home(props) {
               <Link href="/contact_us">
                 <Button
                   sx={{ fontWeight: "700", color: "black" }}
-                  className={styles.activeLink}
+                  style={{
+                    marginRight: "1rem",
+                    marginLeft: "1rem",
+                    fontFamily: "cursive",
+                    fontWeight: "bolder",
+                    borderBottom: "2px solid black",
+                    borderRadius: "0%",
+                  }}
                 >
                   Contact Us
                 </Button>
@@ -144,7 +162,21 @@ export default function Home(props) {
           </ScrollTop>
           <Box className={styles.otherPagesHeader}>
             <Grid container spacing={2}>
-              <Grid item xs={12} className={styles.PageTitleContainer} pl={10}>
+              <Grid
+                item
+                xs={12}
+                className={styles.PageTitleContainer}
+                style={{
+                  flex: "1",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "left",
+                  minHeight: "50vh",
+                }}
+                pl={10}
+              >
                 <Fade top>
                   <Typography
                     ml={10}
@@ -187,7 +219,18 @@ export default function Home(props) {
             className={styles.testimonalContainer}
           >
             <Grid container spacing={2}>
-              <Grid item xs={8} className={styles.contactCards}>
+              <Grid
+                item
+                xs={8}
+                className={styles.contactCards}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  backgroundColor: "rgba(0, 0, 0, 0.829)",
+                  height: "70vh",
+                }}
+              >
                 <Typography
                   variant="h4"
                   component="text"
@@ -202,7 +245,19 @@ export default function Home(props) {
                   Contact us for will go here
                 </Typography>
               </Grid>
-              <Grid item xs={4} pt={3} className={styles.contactusTitle}>
+              <Grid
+                item
+                xs={4}
+                pt={3}
+                className={styles.contactusTitle}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "top",
+                  backgroundColor: "rgba(255, 217, 0, 0.555)",
+                  height: "70vh",
+                }}
+              >
                 <Pulse>
                   <Typography
                     variant="h5"
@@ -262,7 +317,18 @@ export default function Home(props) {
 
       <footer className={styles.footer}>
         <Grid container spacing={2}>
-          <Grid item xs={4} className={styles.footerLogo}>
+          <Grid
+            item
+            xs={4}
+            className={styles.footerLogo}
+            style={{
+              height: "30vh",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "left",
+            }}
+          >
             <Typography
               variant="h4"
               component="text"
@@ -301,17 +367,17 @@ export default function Home(props) {
                   Our Services
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton>
                       <ListItemText primary="Service 1" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton component="a" href="#simple-list">
                       <ListItemText primary="Service 2" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton>
                       <ListItemText primary="Service 3" />
                     </ListItemButton>
@@ -328,17 +394,17 @@ export default function Home(props) {
                   Our Locations
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton>
                       <ListItemText primary="Location 1" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton component="a" href="#simple-list">
                       <ListItemText primary="Location 2" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton>
                       <ListItemText primary="Location 3" />
                     </ListItemButton>
@@ -354,7 +420,7 @@ export default function Home(props) {
                   Find Us On
                 </Typography>
                 <List>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton>
                       <ListItemIcon>
                         <FacebookIcon />
@@ -362,7 +428,7 @@ export default function Home(props) {
                       <ListItemText primary="Facebook" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton component="a" href="#simple-list">
                       <ListItemIcon>
                         <LinkedInIcon />
@@ -370,7 +436,7 @@ export default function Home(props) {
                       <ListItemText primary="LinkedIn" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton>
                       <ListItemIcon>
                         <TwitterIcon />

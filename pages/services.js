@@ -96,7 +96,13 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static" className={styles.appBar}>
+          <AppBar
+            position="static"
+            className={styles.appBar}
+            style={{
+              backgroundColor: "rgba(255, 217, 0, 0.712)",
+            }}
+          >
             <Toolbar variant="dense">
               <Typography
                 variant="h5"
@@ -106,12 +112,24 @@ export default function Home(props) {
                 Company Logo
               </Typography>
               <Link href="/">
-                <Button sx={{ fontWeight: "700", color: "black" }}>Home</Button>
+                <Button
+                  sx={{ fontWeight: "700", color: "black" }}
+                  className={styles.activeLink}
+                >
+                  Home
+                </Button>
               </Link>
               <Link href="/services">
                 <Button
                   sx={{ fontWeight: "700", color: "black" }}
-                  className={styles.activeLink}
+                  style={{
+                    marginRight: "1rem",
+                    marginLeft: "1rem",
+                    fontFamily: "cursive",
+                    fontWeight: "bolder",
+                    borderBottom: "2px solid black",
+                    borderRadius: "0%",
+                  }}
                 >
                   Services
                 </Button>
@@ -140,7 +158,21 @@ export default function Home(props) {
           </ScrollTop>
           <Box className={styles.otherPagesHeader}>
             <Grid container spacing={2}>
-              <Grid item xs={12} className={styles.PageTitleContainer} pl={10}>
+              <Grid
+                item
+                xs={12}
+                className={styles.PageTitleContainer}
+                pl={10}
+                style={{
+                  flex: "1",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "left",
+                  minHeight: "50vh",
+                }}
+              >
                 <Fade top>
                   <Typography
                     ml={10}
@@ -184,9 +216,29 @@ export default function Home(props) {
             className={styles.servicesDisplay}
           >
             <Grid container spacing={2}>
-              <Grid item xs={12} className={styles.serviceContainer}>
+              <Grid
+                item
+                xs={12}
+                className={styles.serviceContainer}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Grid container spacing={2}>
-                  <Grid item xs={6} className={styles.servicesTitle}>
+                  <Grid
+                    item
+                    xs={6}
+                    className={styles.servicesTitle}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "left",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Fade left>
                       <Typography
                         ml={23}
@@ -222,13 +274,18 @@ export default function Home(props) {
                       </Typography>
                       <Button
                         variant="outlined"
+                        ml={23}
                         sx={{
                           mt: 2,
                           ml: 23,
                           width: 200,
                           height: 60,
                         }}
-                        className={styles.contactUsBut}
+                        style={{
+                          backgroundColor: "black",
+                          color: "white",
+                          fontWeight: "bold",
+                        }}
                       >
                         CONTACT US
                       </Button>
@@ -248,7 +305,17 @@ export default function Home(props) {
                 </Grid>
               </Grid>
 
-              <Grid item xs={12} className={styles.serviceContainer}>
+              <Grid
+                item
+                xs={12}
+                className={styles.serviceContainer}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Grid container spacing={2}>
                   <Grid item xs={6} className={styles.servicePic}>
                     <Pulse>
@@ -263,7 +330,16 @@ export default function Home(props) {
                     </Pulse>
                   </Grid>
 
-                  <Grid item xs={6} className={styles.servicesTitle}>
+                  <Grid
+                    item
+                    xs={6}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "left",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Fade right>
                       <Typography
                         mr={23}
@@ -306,7 +382,11 @@ export default function Home(props) {
                           width: 200,
                           height: 60,
                         }}
-                        className={styles.contactUsBut}
+                        style={{
+                          backgroundColor: "black",
+                          color: "white",
+                          fontWeight: "bold",
+                        }}
                       >
                         CONTACT US
                       </Button>
@@ -314,9 +394,28 @@ export default function Home(props) {
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item xs={12} className={styles.serviceContainer}>
+              <Grid
+                item
+                xs={12}
+                className={styles.serviceContainer}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Grid container spacing={2}>
-                  <Grid item xs={6} className={styles.servicesTitle}>
+                  <Grid
+                    item
+                    xs={6}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "left",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Fade left>
                       <Typography
                         ml={23}
@@ -359,7 +458,11 @@ export default function Home(props) {
                           width: 200,
                           height: 60,
                         }}
-                        className={styles.contactUsBut}
+                        style={{
+                          backgroundColor: "black",
+                          color: "white",
+                          fontWeight: "bold",
+                        }}
                       >
                         CONTACT US
                       </Button>
@@ -378,7 +481,17 @@ export default function Home(props) {
                 </Grid>
               </Grid>
 
-              <Grid item xs={12} className={styles.serviceContainer}>
+              <Grid
+                item
+                xs={12}
+                className={styles.serviceContainer}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Grid container spacing={2}>
                   <Grid item xs={6} className={styles.servicePic}>
                     <Fade left>
@@ -390,7 +503,16 @@ export default function Home(props) {
                       />
                     </Fade>
                   </Grid>
-                  <Grid item xs={6} className={styles.servicesTitle}>
+                  <Grid
+                    item
+                    xs={6}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "left",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Fade right>
                       <Typography
                         mr={10}
@@ -433,7 +555,11 @@ export default function Home(props) {
                           width: 200,
                           height: 60,
                         }}
-                        className={styles.contactUsBut}
+                        style={{
+                          backgroundColor: "black",
+                          color: "white",
+                          fontWeight: "bold",
+                        }}
                       >
                         CONTACT US
                       </Button>
@@ -448,7 +574,18 @@ export default function Home(props) {
 
       <footer className={styles.footer}>
         <Grid container spacing={2}>
-          <Grid item xs={4} className={styles.footerLogo}>
+          <Grid
+            item
+            xs={4}
+            className={styles.footerLogo}
+            style={{
+              height: "30vh",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "left",
+            }}
+          >
             <Typography
               variant="h4"
               component="text"
