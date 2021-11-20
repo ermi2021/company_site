@@ -350,6 +350,11 @@ export default function Home(props) {
                           height: 60,
                         }}
                         className={styles.serviceButton}
+                        style={{
+                          borderColor: "gold",
+                          color: "black",
+                          fontWeight: "bold",
+                        }}
                       >
                         Learn More
                       </Button>
@@ -412,6 +417,11 @@ export default function Home(props) {
                           height: 60,
                         }}
                         className={styles.serviceButton}
+                        style={{
+                          borderColor: "gold",
+                          color: "black",
+                          fontWeight: "bold",
+                        }}
                       >
                         Learn More
                       </Button>
@@ -474,6 +484,11 @@ export default function Home(props) {
                           height: 60,
                         }}
                         className={styles.serviceButton}
+                        style={{
+                          borderColor: "gold",
+                          color: "black",
+                          fontWeight: "bold",
+                        }}
                       >
                         Learn More
                       </Button>
@@ -536,6 +551,11 @@ export default function Home(props) {
                           height: 60,
                         }}
                         className={styles.serviceButton}
+                        style={{
+                          borderColor: "gold",
+                          color: "black",
+                          fontWeight: "bold",
+                        }}
                       >
                         Learn More
                       </Button>
@@ -598,6 +618,11 @@ export default function Home(props) {
                           height: 60,
                         }}
                         className={styles.serviceButton}
+                        style={{
+                          borderColor: "gold",
+                          color: "black",
+                          fontWeight: "bold",
+                        }}
                       >
                         Learn More
                       </Button>
@@ -659,6 +684,11 @@ export default function Home(props) {
                           height: 60,
                         }}
                         className={styles.serviceButton}
+                        style={{
+                          borderColor: "gold",
+                          color: "black",
+                          fontWeight: "bold",
+                        }}
                       >
                         Learn More
                       </Button>
@@ -772,7 +802,17 @@ export default function Home(props) {
                             CTO
                           </Typography>
                         </Grid>
-                        <Grid item xs={4} className={styles.serviceContainer}>
+                        <Grid
+                          item
+                          xs={4}
+                          className={styles.serviceContainer}
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
                           <Avatar
                             alt="A"
                             src="/public/images/header_back3.jpg"
@@ -795,7 +835,17 @@ export default function Home(props) {
                             CTO
                           </Typography>
                         </Grid>
-                        <Grid item xs={4} className={styles.serviceContainer}>
+                        <Grid
+                          item
+                          xs={4}
+                          className={styles.serviceContainer}
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
                           <Avatar
                             alt="A"
                             src="/public/images/header_back3.jpg"
