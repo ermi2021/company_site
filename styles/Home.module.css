@@ -175,6 +175,24 @@
 .elevatedCard {
   
 }
+.formContainer {
+  min-height:70vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+
+  /* justify-content: top; */
+}
+.formTitle {
+ height:10vh;
+}
+.contactInfo1 {
+   background-color: tomato;
+
+}
+.contactInfo2 {
+  background-color: teal;
+}
 .getStartedContainer{
   flex: 1;
   display: flex;

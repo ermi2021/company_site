@@ -39,6 +39,8 @@ import Rotate from "react-reveal/Rotate";
 import Link from "next/link";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -181,21 +183,33 @@ export default function Home(props) {
             pr={25}
             pt={2}
             pb={2}
-            mt={4}
+            mt={13}
             className={styles.testimonalContainer}
           >
             <Grid container spacing={2}>
               <Grid item xs={8} className={styles.contactCards}>
-                <Grid item xs={12}></Grid>
-                <Grid item xs={12}></Grid>
+                <Typography
+                  variant="h4"
+                  component="text"
+                  ml={2}
+                  mr={2}
+                  sx={{
+                    fontWeight: "700",
+                    color: "white",
+                    textAlign: "center",
+                  }}
+                >
+                  Contact us for will go here
+                </Typography>
               </Grid>
-              <Grid item xs={4} className={styles.contactusTitle}>
+              <Grid item xs={4} pt={3} className={styles.contactusTitle}>
                 <Pulse>
                   <Typography
                     variant="h5"
                     component="text"
                     ml={2}
                     mr={2}
+                    mt={2}
                     sx={{
                       fontWeight: "700",
                       color: "black",
@@ -236,16 +250,6 @@ export default function Home(props) {
                           primary="+251 913 38 61 81"
                           secondary="+251 913 38 61 81"
                         />
-                      </ListItemButton>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemButton component="a" href="#simple-list">
-                        <ListItemText primary="Service 2" />
-                      </ListItemButton>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemButton>
-                        <ListItemText primary="Service 3" />
                       </ListItemButton>
                     </ListItem>
                   </List>
